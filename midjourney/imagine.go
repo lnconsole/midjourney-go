@@ -22,7 +22,7 @@ func (c *Client) Imagine(ctx context.Context, imgReq *ImagineRequest) error {
 		ChannelID:     imgReq.ChannelID,
 		SessionID:     SessionID,
 		Data: map[string]any{
-			"version": "1118961510123847772",
+			"version": "1166847114203123795",
 			"id":      "938956540159881230",
 			"name":    "imagine",
 			"type":    "1",
@@ -34,10 +34,10 @@ func (c *Client) Imagine(ctx context.Context, imgReq *ImagineRequest) error {
 				},
 			},
 			"application_command": map[string]any{
-				"id":             "938956540159881230",
-				"application_id": ApplicationID,
-				"version":        "1118961510123847772",
-				// "default_permission":         true,
+				"id":                         "938956540159881230",
+				"application_id":             ApplicationID,
+				"version":                    "1118961510123847772",
+				"default_permission":         true,
 				"default_member_permissions": nil,
 				"type":                       1,
 				"nsfw":                       false,
@@ -52,14 +52,14 @@ func (c *Client) Imagine(ctx context.Context, imgReq *ImagineRequest) error {
 						"required":    true,
 					},
 				},
-				// "attachments": []any{},
+				"attachments": []any{},
 			},
 		},
 	}
 
 	b, _ := json.Marshal(interactionsReq)
 
-	url := "https://discord.com/api/v10/interactions"
+	url := "https://discord.com/api/v9/interactions"
 	req, err := http.NewRequest("POST", url, bytes.NewReader(b))
 	if err != nil {
 		return fmt.Errorf("Call http.NewRequest failed, err: %w", err)
