@@ -34,10 +34,10 @@ func (c *Client) Imagine(ctx context.Context, imgReq *ImagineRequest) error {
 				},
 			},
 			"application_command": map[string]any{
-				"id":                         "938956540159881230",
-				"application_id":             ApplicationID,
-				"version":                    "1118961510123847772",
-				"default_permission":         true,
+				"id":             "938956540159881230",
+				"application_id": ApplicationID,
+				"version":        "1118961510123847772",
+				// "default_permission":         true,
 				"default_member_permissions": nil,
 				"type":                       1,
 				"nsfw":                       false,
@@ -52,7 +52,7 @@ func (c *Client) Imagine(ctx context.Context, imgReq *ImagineRequest) error {
 						"required":    true,
 					},
 				},
-				"attachments": []any{},
+				// "attachments": []any{},
 			},
 		},
 	}
