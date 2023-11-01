@@ -59,7 +59,7 @@ func (c *Client) Imagine(ctx context.Context, imgReq *ImagineRequest) error {
 
 	b, _ := json.Marshal(interactionsReq)
 
-	url := "https://discord.com/api/v9/interactions"
+	url := "https://discord.com/api/v10/interactions"
 	req, err := http.NewRequest("POST", url, bytes.NewReader(b))
 	if err != nil {
 		return fmt.Errorf("Call http.NewRequest failed, err: %w", err)
